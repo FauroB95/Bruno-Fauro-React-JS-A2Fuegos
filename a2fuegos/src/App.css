@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.colorNabvar{
+  background-color: lightskyblue;
+}
+
+.navbar-brand{
+  font-weight: bolder;
+}
+
+.nav-item{
+  margin-left: 90px;
+}
