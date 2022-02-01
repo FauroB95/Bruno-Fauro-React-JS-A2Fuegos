@@ -1,4 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from './CartWidget';
+
 
 //Funcion flecha, que crea un componente que retorna/da como resultado un div.
 const Navbar = () => {
@@ -24,6 +26,7 @@ const Navbar = () => {
         <li className="nav-item">
           <a className="nav-link disabled">Registracion</a>
         </li>
+        <CartWidget />
       </ul>
     </div>
   </div>
