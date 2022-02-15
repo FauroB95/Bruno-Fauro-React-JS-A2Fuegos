@@ -34,24 +34,10 @@ export default Item;
 
 
 /*
-
-*/
-
-/*
 import ItemCount from "./ItemCount";
-import { useEffect, useState } from 'react';
-import { customFetch } from "./customFetch";
 const {products} = require('./products');
 
 const Item = (props) => {
-
-    const [productos, setProductos] = useState([]);
-
-    useEffect(() => {
-        customFetch(2000, products)
-            .then(respuesta => setProductos(respuesta))
-            .catch(error => console.log(error))
-    },[]) 
 
 const onAdd = (tipo, setPuntaje, puntaje, stock) => {
     if (tipo === "suma" && puntaje < stock) setPuntaje(puntaje + 1);
@@ -60,7 +46,7 @@ const onAdd = (tipo, setPuntaje, puntaje, stock) => {
 
 return (
     <div>
-    {productos.map (props => 
+    {products.map (props => 
     <div className="video-container">
     <div className="video-image">
         <img src={props.imagen} alt={props.nombre} />
