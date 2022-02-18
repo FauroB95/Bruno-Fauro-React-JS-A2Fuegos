@@ -9,8 +9,8 @@ export const customFetch = (timeout, task) => {
                     reject("KO");
                 }
             }, timeout);
-        })
-}
+        });
+};
 
 /*
 let is_ok = true;

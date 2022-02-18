@@ -1,3 +1,52 @@
+import Detail from "./Detail";
+
+const ItemDetail = ({ articulo }) => {
+    console.log(articulo.imagen);
+    return (
+        <Detail
+            posicion={articulo.key}
+            imagen={articulo.imagen}
+            nombre={articulo.nombre}
+            descripcion={articulo.descripcion}
+            stock={articulo.stock}
+            precio={articulo.precio}
+        />
+    );
+};
+
+export default ItemDetail;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 import { useEffect, useState } from 'react';
 import { customFetch } from "./customFetch";
 import Detail from "./Detail";
@@ -38,6 +87,9 @@ const ItemDetail = () => {
 
 
 export default ItemDetail;
+
+*/
+
 
 /*
 return(

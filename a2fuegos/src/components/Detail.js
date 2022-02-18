@@ -17,6 +17,30 @@ return (
 
 export default Detail;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 return (
     <div>

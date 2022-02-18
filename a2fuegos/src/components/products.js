@@ -5,7 +5,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "3500",
         stock: "10",
-        imagen:"https://i.ytimg.com/vi/zQ41hqlV0Kk/mqdefault.jpg",
+        filtro: 2,
+        imagen:"assets/Cuchillo Carnicero.jpg",
     },
     {   
         key: "2",
@@ -13,7 +14,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "7000", 
         stock: "8", 
-        imagen:"./src/assets/Cuchillo mango de ciervo.jpg",
+        filtro: 2,
+        imagen:"assets/Cuchillo mango de ciervo.jpg",
     },
     {
         key: "3", 
@@ -21,7 +23,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "7000", 
         stock: "5", 
-        imagen:"./Imagenes/Disco para cocinar.jpg",
+        filtro: 1,
+        imagen:"assets/Disco para cocinar.jpg",
     },
     {
         key: "4", 
@@ -29,7 +32,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "2500", 
         stock: "20", 
-        imagen:"./Imagenes/Palita y desparramador.jpg",
+        filtro: 1,
+        imagen:"assets/Palita y desparramador.jpg",
     },
     {
         key: "5", 
@@ -37,7 +41,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.", 
         precio: "2500", 
         stock: "30", 
-        imagen:"./Imagenes/Juego de asado.jpg",
+        filtro: 1,
+        imagen:"assets/Juego de asado.jpg",
     },
     {
         key: "6", 
@@ -45,7 +50,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.", 
         precio: "6000", 
         stock: "15", 
-        imagen:"./Imagenes/Estaca para asado.jpg",
+        filtro: 1,
+        imagen:"assets/Estaca para asado.jpg",
     },
     {
         key: "7", 
@@ -53,7 +59,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.", 
         precio: "2500", 
         stock: "9", 
-        imagen:"./Imagenes/Guantes ignifugos.jpg",
+        filtro: 3,
+        imagen:"assets/Guantes ignifugos.jpg",
     },
     {
         key: "8", 
@@ -61,7 +68,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "1500", 
         stock: "20", 
-        imagen:"./Imagenes/Delantal cocinero.webp",
+        filtro: 3,
+        imagen:"assets/Delantal cocinero.webp",
     },
     {
         key: "9", 
@@ -69,7 +77,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "2000", 
         stock: "15", 
-        imagen:"./Imagenes/Brasero.jpg",
+        filtro: 1,
+        imagen:"assets/Brasero.jpg",
     },
     {
         key: "10", 
@@ -77,7 +86,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "18000", 
         stock: "10", 
-        imagen:"./Imagenes/Parrilla movil.jpg",
+        filtro: 1,
+        imagen:"assets/Parrilla movil.jpg",
     },
     {
         key: "11", 
@@ -85,7 +95,8 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "70000", 
         stock: "5", 
-        imagen:"./Imagenes/Asador redondo.jpg",
+        filtro: 1,
+        imagen:"assets/Asador redondo.jpg",
     },
     {
         key: "12", 
@@ -93,10 +104,9 @@ const products = [
         descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iure voluptatem laborum beatae, provident in possimus maxime quia, facere delectus esse asperiores natus excepturi? Ipsum, nostrum? Omnis inventore quaerat unde.",
         precio: "800", 
         stock: "50", 
-        imagen:"./src/assets/Espadas Galeto.jpg",
+        filtro: 1,
+        imagen:"assets/Espadas Galeto.jpg",
     }
 ]; 
 
-module.exports = {
-    products,
-}
+export default products;
