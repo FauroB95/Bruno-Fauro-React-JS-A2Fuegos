@@ -10913,8 +10913,13 @@ textarea.form-control-lg {
 
 .contenedorCarrito{
   position: absolute;
-  left: 820px;
+  left: 920px;
   bottom: 3px;
+}
+
+.inputBusqueda{
+  position: absolute;
+  right: 100px;
 }
 
 .video-container {
@@ -10972,3 +10977,15 @@ textarea.form-control-lg {
   text-align: center;
 }
 
+.botonAgregarCarrito {
+  border-radius: 10px;
+  background-color: skyblue;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.botonAgregar {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 35px;
+}
