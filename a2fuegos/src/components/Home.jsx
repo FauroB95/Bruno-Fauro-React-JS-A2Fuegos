@@ -4,10 +4,12 @@ import ItemListContainer from './ItemListContainer';
 import ItemDetailContainer from './ItemDetailContainer';
 import Navbar from './Navbar';
 import Cart from './Cart';
+import CartContextProvider from './CartContext';
 
 const Home = () => {
     return (
         <>
+        <CartContextProvider>
         <BrowserRouter>
         <Navbar />
         <Routes>
@@ -17,6 +19,7 @@ const Home = () => {
         <Route path='/cart' element={<Cart />} />
         </Routes>
         </BrowserRouter>
+        </CartContextProvider>
         </>
     );
 };

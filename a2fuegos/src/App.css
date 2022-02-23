@@ -10989,3 +10989,9 @@ textarea.form-control-lg {
   margin-top: 10px;
   margin-left: 35px;
 }
+
+.borrarTodo {
+  margin-left: 360px;
+  background-color: red;
+  font-weight: bolder;
+}
