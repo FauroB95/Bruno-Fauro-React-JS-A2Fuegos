@@ -10898,23 +10898,27 @@ textarea.form-control-lg {
 }
 
 .imagenCarrito{
-  width: 55px;
+  width: 35px;
   height: 40px;
   margin-right: 5px;
+  position: relative;
+  top: 5px;
+  right: 5px;
 }
 
 .numeradorCarrito{
   position: absolute;
-  bottom: 20px;
+  bottom: 22px;
   font-weight: bolder;
   color: black;
-  right: 2px;
+  left: 35px;
 }
 
 .contenedorCarrito{
   position: absolute;
-  left: 920px;
+  left: 940px;
   bottom: 3px;
+  width: 58px;
 }
 
 .inputBusqueda{
@@ -10994,4 +10998,56 @@ textarea.form-control-lg {
   margin-left: 360px;
   background-color: red;
   font-weight: bolder;
+}
+
+.ticket {
+  width: 400px;
+  position: relative;
+  left: 290px;
+  border: 2px solid black;
+  top: 10px;
+}
+
+.subTotal {
+  position: relative;
+  left: 150px;
+}
+
+.impuestos {
+  position: relative;
+  left: 28px;
+}
+
+.bonificacion {
+  position: relative;
+  left: 57px;
+}
+
+.total {
+  position: relative;
+  left: 182px;
+  border-top: 2px solid black;
+  width: 180px;
+  color: red;
+}
+
+.finalizaCompra{
+  position: relative;
+  left: 190px;
+  top: 10px;
+  font-weight: bolder;
+  background-color: green;
+  margin-bottom: 30px;
+}
+
+.calculoCompra{
+  text-align: center;
+  position: relative;
+  top: 5px;
+  text-decoration: underline 5px solid;
+}
+
+.articuloCompras {
+  position: relative;
+  top: 10px;
 }

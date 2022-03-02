@@ -18,7 +18,7 @@ const ItemListContainer = () => {
         }))
             .then(respuesta => setArticulo(respuesta))
             .catch(error => console.log(error))
-        }, [articulo]);
+        }, [filtro]);
 
 return (<>
     <ItemList items = {articulo} />
