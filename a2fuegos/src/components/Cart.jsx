@@ -1,12 +1,50 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductAmountContainer, ProductAmount, ProductPrice } from './styledComponents';
+import { increment, serverTimestamp, updateDoc } from "firebase/firestore";
+import db from "./FirebaseConfig";
+import { collection, doc, setDoc } from "firebase/firestore";
 import FormatNumber from "./FormatoNumber";
 
 
 const Cart = () => {
 
     const test = useContext(CartContext);
+
+    const createOrder = () => {
+        let order = {
+            buyer: {
+                Nombre: "Leo Messi",
+                Email: "leomessi@gmail.com",
+                Tel: "15878999",
+            },
+            items: test.cartList.map((traeme) => {
+                return {key: traeme.key, apodo: traeme.apodo, monto: traeme.monto, cantidadItem: traeme.cantidadItem};
+            }),
+            date:serverTimestamp (),
+            total: test.calculoTotal()
+        }
+        console.log(order)
+
+        const createOrderInFirestore = async () => {
+            const newOrderRef = doc(collection(db, "orders"));
+            await setDoc (newOrderRef, order);
+            return newOrderRef;
+        }
+    
+        createOrderInFirestore  ()
+            .then(result => {
+                alert ("Tu orden se creo con exito:" + result.id);
+                test.cartList.map(async (item) => {
+                    const itemRef = doc(db, "products", item.key);
+                    await updateDoc (itemRef, {
+                    stock: increment (-item.cantidadItem)
+                });
+            });
+                test.removeCart();
+            })
+            .catch(error => console.log(error));
+    };
 
     return (
         <WrapperCart>
@@ -59,7 +97,7 @@ const Cart = () => {
                                 <h5 className="impuestos">Impuestos Nacionales <FormatNumber number={test.impuestos()} /> </h5>
                                 <h5 className="bonificacion">Bonificacion Extra <FormatNumber number={-test.impuestos()} /></h5>
                                 <h5 className="total">Total <FormatNumber number={test.calculoTotal()} /></h5>    
-                                <button className="finalizaCompra">Finalizar compra</button>
+                                <button onClick={createOrder} className="finalizaCompra">Finalizar compra</button>
                             </article>
                         </div>
                 }

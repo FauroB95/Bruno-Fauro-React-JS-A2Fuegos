@@ -14,13 +14,21 @@ const ItemListContainer = () => {
     useEffect(() => {
         const firestoreFetch = async () => {
         const querySnapshot = await getDocs(collection(db, "products"));
-        return querySnapshot.docs.map (document => ({
+        return querySnapshot.docs.map ((document) => ({
             id: document.id,
             ...document.data()
-        }))
-    }
+        }));
+    };
     firestoreFetch()
-        .then(result => setArticulo(result))
+        .then((result) => {
+            if (filtro) {
+                setArticulo(
+                    result.filter((item) => item.filtro.toString() === filtro)
+                );
+            } else {
+                setArticulo(result);
+            }
+        })
         .catch(error => console.log(error))
 }, [filtro]);
 
@@ -64,5 +72,12 @@ return (<>
 export default ItemListContainer;
 */
 
+
+/*
+firestoreFetch()
+        .then(result => setArticulo(result))
+        .catch(error => console.log(error))
+}, [filtro]);
+*/
 
 
