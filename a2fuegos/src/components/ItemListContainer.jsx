@@ -1,11 +1,63 @@
 import ItemList from "./ItemList";
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import { firestoreFetch } from "./FirestoreFetch";
+
+const ItemListContainer = () => {
+    const [articulo, setArticulo] = useState([]);
+    const { filtro } = useParams();
+
+    useEffect(() => {
+        firestoreFetch (filtro)
+            .then(result => setArticulo(result))
+            .catch(error => console.log(error));
+        }, [filtro]);
+
+        useEffect(() => {
+            return (() => {
+                setArticulo([]);
+            })
+        }, []);
+
+return (<>
+    <ItemList items = {articulo} />
+    </>
+);
+}
+
+export default ItemListContainer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+import ItemList from "./ItemList";
+import { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import db from "./FirebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
+import { firestoreFetch } from "./FirestoreFetch";
 
 //const { products } = require ("./products");
-
+//import { firestoreFetch } from "./FirestoreFetch";
 
 const ItemListContainer = () => {
     const [articulo, setArticulo] = useState([]);
@@ -14,7 +66,7 @@ const ItemListContainer = () => {
     useEffect(() => {
         const firestoreFetch = async () => {
         const querySnapshot = await getDocs(collection(db, "products"));
-        return querySnapshot.docs.map ((document) => ({
+        return querySnapshot.docs.map (document => ({
             id: document.id,
             ...document.data()
         }));
@@ -39,6 +91,53 @@ return (<>
 };
 
 export default ItemListContainer;
+*/
+
+/*
+import ItemList from "./ItemList";
+import { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
+import { firestoreFetch } from "./FirestoreFetch";
+
+const ItemListContainer = () => {
+    const [articulo, setArticulo] = useState([]);
+    const { filtro } = useParams();
+
+    useEffect(() => {
+        firestoreFetch(filtro)
+        .then((result) => {
+            if (filtro) {
+                setArticulo(
+                    result.filter((item) => item.filtro.toString() === filtro)
+                );
+            } else {
+                setArticulo(result);
+            }
+        })
+        .catch(error => console.log(error))
+}, [filtro]);
+
+//componentWillUnmount
+useEffect(() => {
+    return (() => {
+        setArticulo([]);
+    })
+}, []);
+
+
+return (<>
+    <ItemList items = {articulo} />
+    </>
+);
+};
+
+export default ItemListContainer;
+
+*/
+
+
+
+
 
 /*
 import ItemList from "./ItemList";
