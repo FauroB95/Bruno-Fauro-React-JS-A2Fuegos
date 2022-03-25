@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bruno-Fauro-React-JS-A2Fuegos/static/css/main.3c5c891f.css",
+    "main.js": "/Bruno-Fauro-React-JS-A2Fuegos/static/js/main.61c6878a.js",
+    "index.html": "/Bruno-Fauro-React-JS-A2Fuegos/index.html",
+    "main.3c5c891f.css.map": "/Bruno-Fauro-React-JS-A2Fuegos/static/css/main.3c5c891f.css.map",
+    "main.61c6878a.js.map": "/Bruno-Fauro-React-JS-A2Fuegos/static/js/main.61c6878a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c5c891f.css",
+    "static/js/main.61c6878a.js"
+  ]
+}
