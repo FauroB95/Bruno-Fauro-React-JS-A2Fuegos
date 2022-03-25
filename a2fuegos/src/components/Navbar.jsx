@@ -37,5 +37,5 @@ const Navbar = () => {
     );
 }
 
-//Con esta estructura exporta el"Navbar" o lo que fuera.
+//Con esta estructura exporta el "Navbar" o lo que fuera.
 export default Navbar;

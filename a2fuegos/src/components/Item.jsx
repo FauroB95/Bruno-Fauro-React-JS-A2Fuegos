@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 
-const Item = ({ foto, apodo, leyenda, cantidad, seccion, monto }) => {
+const Item = ({ foto, apodo, leyenda, monto }) => {
 
 return (
     <>

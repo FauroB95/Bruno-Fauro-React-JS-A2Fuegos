@@ -1,6 +1,4 @@
 import SearchIcon from '@mui/icons-material/Search';
-//import SearchContainer from './StyledComponents';
-//import { Input } from './StyledComponents';
 
 const Search = () => {
 

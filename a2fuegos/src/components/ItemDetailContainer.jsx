@@ -1,174 +1,40 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import { firestoreFetchOne } from './FirestoreFetch';
-
+import db from '../utils/FirebaseConfig';
+import { query, getDocs, collection } from '@firebase/firestore';
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState([]);
-    const { precio } = useParams ();
+    const { precio } = useParams();
+
+    const getItem = async (precio) => {
+        const q = query(collection(db, 'products'));
+        const querySnapshot = await getDocs(q);
+        const dataFromFirestore = querySnapshot.docs.map((document) => ({
+            id: document.id,
+            ...document.data(),
+        }));
+    const array = dataFromFirestore.find(
+        (item) => item.precio.toString() === precio
+        );
+        console.log(array);
+        setDato(array);
+    };
 
     useEffect(() => {
-        console.log(precio)
-        firestoreFetchOne(precio)
-            .then(result => setDato(result))
-            .catch(err => console.log(err))
+        try {
+            getItem(precio);
+        } catch (err) {
+            console.log('error');
+        }
     }, [precio]);
-    console.log(dato)
-    
+
     return (
         <div className='video-container'>
-
-            <ItemDetail item={dato} />
-            
+        <ItemDetail item={dato} />
         </div>
-        );
-    };
-    
+    );
+};
+
 export default ItemDetailContainer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { customFetch } from "./customFetch";
-import ItemDetail from './ItemDetail';
-//const { products } = require ("./products");
-import products from './products';
-
-
-const ItemDetailContainer = () => {
-    const [dato, setDato] = useState([]);
-    const { precio } = useParams ();
-
-    useEffect(() => {
-        customFetch(2000, products.find (item => item.precio === parseInt(precio)))
-            .then(respuesta => setDato(respuesta))
-            .catch(error => console.log(error));
-    }, []) 
-    
-    return (
-        <div className='video-container'>
-
-            <ItemDetail item={dato} />
-            
-        </div>
-        );
-    };
-    
-export default ItemDetailContainer;
-*/
-
-
-/*
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { customFetch } from "./customFetch";
-import ItemDetail from './ItemDetail';
-import db from "./FirebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
-import { FirestoreFetchOne } from './FirestoreFetchOne';
-//const { products } = require ("./products");
-
-
-const ItemDetailContainer = () => {
-    const [dato, setDato] = useState([]);
-    const { precio } = useParams ();
-
-    useEffect(() => {
-        FirestoreFetchOne(precio)
-            .then(result => setDato(result))
-            .catch(err => console.log(err))
-    }, []);
-        
-    return (
-        <div className='video-container'>
-
-            <ItemDetail item={dato} />
-            
-        </div>
-        );
-    };
-    
-export default ItemDetailContainer;
-*/
-
-/*
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { customFetch } from "./customFetch";
-import ItemDetail from './ItemDetail';
-//const { products } = require ("./products");
-import products from './products';
-
-
-const ItemDetailContainer = () => {
-    const [dato, setDato] = useState([]);
-    const { precio } = useParams ();
-
-    useEffect(() => {
-        customFetch(2000, products.find (item => item.precio === parseInt(precio)))
-            .then(respuesta => setDato(respuesta))
-            .catch(error => console.log(error));
-    }, []) 
-    
-    return (
-        <div className='video-container'>
-
-            <ItemDetail item={dato} />
-            
-        </div>
-        );
-    };
-    
-export default ItemDetailContainer;
-*/
-
-/*
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { customFetch } from "./customFetch";
-import ItemDetail from './ItemDetail';
-//const { products } = require ("./products");
-import products from './products';
-import { firestoreFetchOne } from './FirestoreFetch';
-
-
-const ItemDetailContainer = () => {
-    const [dato, setDato] = useState([]);
-    const { precio } = useParams ();
-
-    useEffect(() => {
-        firestoreFetchOne (precio)
-            .then(respuesta => setDato(respuesta))
-            .catch(error => console.log(error));
-    }, []) 
-    
-    return (
-        <div className='video-container'>
-
-            <ItemDetail item={dato} />
-            
-        </div>
-        );
-    };
-    
-export default ItemDetailContainer;
-*/
