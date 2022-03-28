@@ -22,7 +22,7 @@ import { useEffect, useState } from "react";
 
 return (
     <div>
-        <p>{puntaje} valoraciones.</p>
+        <p>{puntaje} articulo/s.</p>
         <button onClick={aumentar}>
         Positivo
         </button>
