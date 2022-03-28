@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Bruno-Fauro-React-JS-A2Fuegos/static/css/main.3c5c891f.css",
-    "main.js": "/Bruno-Fauro-React-JS-A2Fuegos/static/js/main.61c6878a.js",
-    "index.html": "/Bruno-Fauro-React-JS-A2Fuegos/index.html",
-    "main.3c5c891f.css.map": "/Bruno-Fauro-React-JS-A2Fuegos/static/css/main.3c5c891f.css.map",
-    "main.61c6878a.js.map": "/Bruno-Fauro-React-JS-A2Fuegos/static/js/main.61c6878a.js.map"
+    "main.css": "/a2fuegos/static/css/main.3c5c891f.css",
+    "main.js": "/a2fuegos/static/js/main.05c8a75f.js",
+    "index.html": "/a2fuegos/index.html",
+    "main.3c5c891f.css.map": "/a2fuegos/static/css/main.3c5c891f.css.map",
+    "main.05c8a75f.js.map": "/a2fuegos/static/js/main.05c8a75f.js.map"
   },
   "entrypoints": [
     "static/css/main.3c5c891f.css",
-    "static/js/main.61c6878a.js"
+    "static/js/main.05c8a75f.js"
   ]
 }
