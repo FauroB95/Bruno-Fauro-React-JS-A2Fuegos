@@ -10989,10 +10989,13 @@ textarea.form-control-lg {
   margin-left: 5px;
 }
 
+.agregarCarrito {
+  background-color: green;
+}
+
 .botonAgregar {
   border-radius: 10px;
   margin-top: 10px;
-  margin-left: 35px;
 }
 
 .borrarTodo {
@@ -11086,4 +11089,12 @@ textarea.form-control-lg {
 
 .borrarArticulo {
   background-color: red;
+}
+
+.botonSuma {
+  width: 40px;
+}
+
+.botonResta {
+  width: 40px;
 }

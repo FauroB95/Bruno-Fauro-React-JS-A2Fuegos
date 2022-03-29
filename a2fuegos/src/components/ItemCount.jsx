@@ -23,12 +23,13 @@ import { useEffect, useState } from "react";
 return (
     <div>
         <p>{puntaje} articulo/s.</p>
-        <button onClick={aumentar}>
-        Positivo
+        <button className="botonSuma" onClick={disminuir}>
+        -
         </button>
-        <button onClick={disminuir}>
-        Negativo
+        <button className="botonResta" onClick={aumentar}>
+        +
         </button>
+        
         <div>
         {
             stock && puntaje
