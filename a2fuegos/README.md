@@ -10,32 +10,43 @@ La base de datos utilizada se encuentra alojada en Firebase. Las órdenes de com
 Este es mi proyecto final para el Curso de React JS de CoderHouse.
 
 Para ejecutar el proyecto 🚀
+
 Clonás el proyecto desde tu editor de código
 
-  git clone https://github.com/FauroB95/a2fuegos
+git clone https://github.com/FauroB95/a2fuegos
+
 Te ubicás en la carpeta del proyecto
 
-  npm install
+npm install
+
 Iniciás el servidor
 
-  npm start
+npm start
+
 Y listo!
 
 Link al sitio publicado
 https://faurob95.github.io/
 
 Deployment 📦
+
 Este proyecto contiene solamente tecnología del lado del cliente. Por esta razón, para ejecutarlo tan solo es necesario abrir el archivo index.html en tu browser favorito.
 
 Construido con 🛠️
-HTML
-CSS
-Javascript
+
+# HTML
+# CSS
+# Javascript
 
 Autor ✒️
-Bruno Fauro - FullStack Web Developer en formación, 24 de Marzo de 2022 - alexmarinmendez
+
+Bruno Fauro - FullStack Web Developer en formación, 24 de Marzo de 2022
 
 Expresiones de Gratitud 🎁
+
 Comenta a tod@s sobre este proyecto 📢
+
 Da las gracias públicamente 🤓.
+
 ⌨️ Hecho por Bruno Fauro 😊
+
