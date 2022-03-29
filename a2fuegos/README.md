@@ -1,4 +1,4 @@
-A2Fuegos: 
+# A2Fuegos: 
 
 A2Fuegos es un E-Commerce de productos utilizados para realizar las mejores recetas Argentinas
 y de sus alrededores. La tienda posee una amplia variedad de productos en la cual se encuentran divididos por 3 categorias (Productos, Utensillos, Ropa).
@@ -9,44 +9,44 @@ La base de datos utilizada se encuentra alojada en Firebase. Las órdenes de com
 
 Este es mi proyecto final para el Curso de React JS de CoderHouse.
 
-Para ejecutar el proyecto 🚀
+# Para ejecutar el proyecto 🚀
 
-Clonás el proyecto desde tu editor de código
+* Clonás el proyecto desde tu editor de código
 
-git clone https://github.com/FauroB95/a2fuegos
+* git clone https://github.com/FauroB95/a2fuegos
 
-Te ubicás en la carpeta del proyecto
+* Te ubicás en la carpeta del proyecto
 
-npm install
+* npm install
 
-Iniciás el servidor
+* Iniciás el servidor
 
-npm start
+* npm start
 
-Y listo!
+* Y listo!
 
-Link al sitio publicado
+# Link al sitio publicado
 https://faurob95.github.io/
 
-Deployment 📦
+# Deployment 📦
 
 Este proyecto contiene solamente tecnología del lado del cliente. Por esta razón, para ejecutarlo tan solo es necesario abrir el archivo index.html en tu browser favorito.
 
-Construido con 🛠️
+# Construido con 🛠️
 
-# HTML
-# CSS
-# Javascript
+* HTML
+* CSS
+* Javascript
 
-Autor ✒️
+# Autor ✒️
 
-Bruno Fauro - FullStack Web Developer en formación, 24 de Marzo de 2022
+* Bruno Fauro - FullStack Web Developer en formación, 24 de Marzo de 2022
 
-Expresiones de Gratitud 🎁
+* Expresiones de Gratitud 🎁
 
-Comenta a tod@s sobre este proyecto 📢
+* Comenta a tod@s sobre este proyecto 📢
 
-Da las gracias públicamente 🤓.
+* Da las gracias públicamente 🤓.
 
-⌨️ Hecho por Bruno Fauro 😊
+* ⌨️ Hecho por Bruno Fauro 😊
 
