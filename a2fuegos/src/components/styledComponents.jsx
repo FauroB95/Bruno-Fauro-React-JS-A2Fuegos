@@ -65,5 +65,4 @@ const ProductAmount = styled.div`
 `;
 
 
-
 export {WrapperCart, ProductAmount, ProductAmountContainer, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice}

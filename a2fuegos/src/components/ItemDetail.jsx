@@ -21,14 +21,16 @@ const ItemDetail = ({ item }) => {
             ?
         <div className="video-container">
         <div className="video-image">
-            <img src={item.imagen} alt={item.nombre} />
+            <img className="imagenDetail" src={item.imagen} alt={item.nombre} />
         </div>
         <div className="video-info">
-            <h3 className="colorTexto">DETALLE COMPLETO DEL PRODUCTO</h3>
-            <h3>Nombre: {item.nombre}</h3>
-            <p>Descripcion: {item.descripcion}</p>
-            <p>Precio: {item.precio}</p>
-            <p>Stock: {item.stock}</p>
+            <h3 className="opaco">DETALLE COMPLETO.</h3>
+            <br/>
+            <h4 className="colorTexto">{item.nombre}</h4>
+            <br/>
+            <p className="enmarcado">Descripcion:</p><p>{item.descripcion}</p>
+            <p className="enmarcado">Precio: $ {item.precio}</p>
+            <p className="enmarcado">Stock: {item.stock}</p>
             <Link to= {`/item/${item.precio}`}></Link>
             {
                 ingresoStock === 0

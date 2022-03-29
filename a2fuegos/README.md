@@ -1,5 +1,4 @@
 A2Fuegos: 
-Project's Screenshot
 
 A2Fuegos es un E-Commerce de productos utilizados para realizar las mejores recetas Argentinas
 y de sus alrededores. La tienda posee una amplia variedad de productos en la cual se encuentran divididos por 3 categorias (Productos, Utensillos, Ropa).
@@ -13,7 +12,7 @@ Este es mi proyecto final para el Curso de React JS de CoderHouse.
 Para ejecutar el proyecto 🚀
 Clonás el proyecto desde tu editor de código
 
-  git clone https://github.com/FauroB95/Bruno-Fauro-React-JS-A2Fuegos/tree/master/a2fuegos
+  git clone https://github.com/FauroB95/a2fuegos
 Te ubicás en la carpeta del proyecto
 
   npm install
@@ -23,7 +22,7 @@ Iniciás el servidor
 Y listo!
 
 Link al sitio publicado
-https://limited-edition.netlify.app/
+https://faurob95.github.io/
 
 Deployment 📦
 Este proyecto contiene solamente tecnología del lado del cliente. Por esta razón, para ejecutarlo tan solo es necesario abrir el archivo index.html en tu browser favorito.

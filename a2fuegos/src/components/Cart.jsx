@@ -56,11 +56,11 @@ const Cart = () => {
 
     return (
         <WrapperCart>
-            <TitleCart>MI CARRITO DE COMPRAS</TitleCart>
+            <TitleCart className="nombreCarrito">MI CARRITO DE COMPRAS</TitleCart>
                 {
                     (test.cartList.length > 0)
                     ? <button className="borrarTodo" onClick={test.removeCart}>BORRAR TODOS LOS PRODUCTOS</button>
-                    : <h2> El carrito se a vaciado <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDlVy_x_XY2F-ikPfhttdNayomZnfTuf0E2g&usqp=CAU" /></h2>
+                    : <h2> El carrito de compras se a vaciado <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDlVy_x_XY2F-ikPfhttdNayomZnfTuf0E2g&usqp=CAU" /></h2>
                 }
             <ContentCart>
                 <div>
@@ -75,20 +75,24 @@ const Cart = () => {
                         <span>
                             <b>Articulo: </b>{item.apodo}
                         </span>
-                        <button onClick={() => test.deleteProduct(item.key)}>Borrar articulo</button>
+                        <button className="borrarArticulo" onClick={() => test.deleteProduct(item.key)}>Borrar articulo</button>
                         </Details>
                     </ProductDetail>
                     <PriceDetail>
                         <ProductAmountContainer>
                         <ProductAmount> 
-                            Cantidad: {item.cantidadItem}
+                            <div>
+                            <h5 className="opaco">Cantidad Items: {item.cantidadItem}</h5>
+                            </div>
                         </ProductAmount>
                         </ProductAmountContainer>
                         <ProductPrice>
-                            Precio: {item.monto}
+                            <div>
+                            <h5 className="opaco">Precio: $ {item.monto}</h5>
+                            </div>
                         </ProductPrice>
                         <div>
-                            <h6>Subtotal: $ {test.calculoTotalPorItem(item.key)}</h6>
+                            <h4>Subtotal: $ {test.calculoTotalPorItem(item.key)}</h4>
                         </div>
                     </PriceDetail>
                     </Product>
@@ -102,7 +106,7 @@ const Cart = () => {
                             <h4 className="calculoCompra">CALCULO TOTAL DE LA COMPRA</h4>
                             <article className="articuloCompras">
                                 <h5 className="subTotal">Subtotal <FormatNumber number={test.calculoSubTotal()} /> </h5>
-                                <h5 className="impuestos">Impuestos Nacionales <FormatNumber number={test.impuestos()} /> </h5>
+                                <h5 className="impuestos opaco">Impuestos Nacionales <FormatNumber number={test.impuestos()} /> </h5>
                                 <h5 className="bonificacion">Bonificacion Extra <FormatNumber number={-test.impuestos()} /></h5>
                                 <h5 className="total">Total <FormatNumber number={test.calculoTotal()} /></h5>    
                                 <button onClick={createOrder} className="finalizaCompra">Finalizar compra</button>

@@ -10959,6 +10959,7 @@ textarea.form-control-lg {
 
 .colorTexto {
   color: red;
+  text-decoration: underline black;
 }
 
 .greeting {
@@ -10997,7 +10998,7 @@ textarea.form-control-lg {
 .borrarTodo {
   margin-left: 360px;
   background-color: red;
-  font-weight: bolder;
+  font-weight: 400;
 }
 
 .ticket {
@@ -11050,4 +11051,39 @@ textarea.form-control-lg {
 .articuloCompras {
   position: relative;
   top: 10px;
+}
+
+.colorCard {
+  background-color: tan;
+}
+
+.tarjeta {
+  border: 5px solid black;
+}
+
+.posicionBoton {
+  position: relative;
+  left: 90px;
+}
+
+.opaco {
+  opacity: 50%;
+}
+
+.enmarcado {
+  font-weight: 900;
+  color: black;
+}
+
+.imagenDetail {
+  width: 500px;
+}
+
+.nombreCarrito {
+  font-weight: 900;
+  font-family: cursive;
+}
+
+.borrarArticulo {
+  background-color: red;
 }
