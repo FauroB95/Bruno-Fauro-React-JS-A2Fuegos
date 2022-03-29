@@ -26,7 +26,7 @@ Este es mi proyecto final para el Curso de React JS de CoderHouse.
 * Y listo!
 
 # Link al sitio publicado
-faurob95.github.io/a2fuegos/
+https://faurob95.github.io/a2fuegos/
 
 # Deployment 📦
 
